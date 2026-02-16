@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story — Umoya Hotel</title>
+  <meta name="description" content="Discover the story behind Umoya Hotel — from Georgie's journey across Africa to creating an intimate sanctuary in Hout Bay.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .story-section {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 6rem 2rem;
+    }
+    
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+      margin-bottom: 8rem;
+    }
+    
+    .story-image {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      box-shadow: var(--shadow-medium);
+    }
+    
+    .story-text h3 {
+      color: var(--color-terracotta);
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+    
+    .story-text h2 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+    
+    .story-text p {
+      font-size: 1.125rem;
+      line-height: 2;
+      color: var(--color-charcoal);
+      margin-bottom: 1.5rem;
+    }
+    
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+    
+    .value-card {
+      background-color: white;
+      padding: 3rem;
+      box-shadow: var(--shadow-soft);
+      border-top: 4px solid var(--color-olive);
+      transition: var(--transition-smooth);
+    }
+    
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-medium);
+    }
+    
+    .value-card h4 {
+      color: var(--color-terracotta);
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .value-card p {
+      color: var(--color-stone);
+      line-height: 1.8;
+    }
+    
+    @media (max-width: 968px) {
+      .story-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-bottom: 4rem;
+      }
+      
+      .story-image {
+        height: 400px;
+      }
+      
+      .story-section {
+        padding: 4rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="index.html">
+        <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/b1fe7a6b-8feb-4164-8c0e-5db2b9d1bca5/UmoyaTERRA.png?format=1500w" alt="Umoya Hotel" class="nav-logo">
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="rooms.html" class="nav-link">Rooms</a></li>
+        <li><a href="about.html" class="nav-link">Our Story</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="activities.html" class="nav-link">Experiences</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="height: 70vh;">
+    <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/cc435b32-4d31-45ac-84e4-5df927ff2457/Umoya_55.JPG" alt="Umoya Hotel" class="hero-image">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="subtitle hero-subtitle">About Us</p>
+      <h1 class="hero-title">Our Story</h1>
+      <p class="tagline hero-subtitle">A love letter to Africa,<br>written in stone and breath</p>
+    </div>
+  </section>
+
+  <!-- GEORGIE'S STORY -->
+  <section class="story-section">
+    <div class="story-grid reveal">
+      <div class="story-text">
+        <h3>The Beginning</h3>
+        <h2>A Journey Across Africa</h2>
+        <p>
+          In 1994, Georgie Friederichs, a Dutch national with an adventurous spirit, 
+          first set foot in Cape Town. What was meant to be a brief visit became a 
+          lifelong love affair with the African continent.
+        </p>
+        <p>
+          Over the years, Georgie traveled extensively throughout Africa — from the 
+          wild landscapes of Zimbabwe and Botswana to the vast plains of Tanzania and 
+          the stark beauty of Namibia. Each journey deepened her connection to the land, 
+          its people, and its extraordinary spirit.
+        </p>
+        <p>
+          But it was Cape Town that called her home. Specifically, the hidden gem of 
+          Hout Bay, nestled between mountains and sea, where the air feels different — 
+          cleaner, lighter, more alive. It was here that Georgie decided to create 
+          something special.
+        </p>
+      </div>
+      
+      <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/18acea4c-ea33-40e3-b1da-9bf9a523001b/Umoya028-min.JPG" alt="Hout Bay Landscape" class="story-image">
+    </div>
+
+    <div class="story-grid reveal">
+      <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/d462053a-7115-4754-951f-5c8099c7390d/Umoya038-min.jpg" alt="Interior Design" class="story-image">
+      
+      <div class="story-text">
+        <h3>The Vision</h3>
+        <h2>More Than a Hotel</h2>
+        <p>
+          Umoya — meaning "air and breath" in Zulu and Xhosa — was born from Georgie's 
+          vision to create an authentic Cape Town experience. Not the sanitized, 
+          tourist-brochure version, but the real thing: warm, textured, alive with 
+          local culture and natural beauty.
+        </p>
+        <p>
+          Every decision at Umoya reflects this philosophy. Local artists were commissioned 
+          to create unique works for each room. Indigenous gardens were planted to honor 
+          the land's natural heritage. Sustainable practices were woven into every operation, 
+          from solar panels to rainwater harvesting.
+        </p>
+        <p>
+          This isn't just hospitality — it's an invitation to experience Cape Town as 
+          Georgie does: as a place where nature, art, community, and comfort converge 
+          into something greater than the sum of its parts.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="section reveal" style="background-color: var(--color-sand); padding: 6rem 2rem;">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      <p class="subtitle" style="text-align: center; margin-bottom: 1rem;">What We Stand For</p>
+      <h2 style="text-align: center; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; margin-bottom: 3rem;">
+        Our Values
+      </h2>
+      
+      <div class="values-grid">
+        <div class="value-card">
+          <h4>Sustainability</h4>
+          <p>
+            We honor the land that hosts us. Our solar panels generate clean energy, 
+            rainwater catchment systems reduce water usage, and a borehole ensures 
+            water security. Indigenous gardens support local ecosystems, and locally 
+            sourced materials minimize our carbon footprint.
+          </p>
+        </div>
+        
+        <div class="value-card">
+          <h4>Community</h4>
+          <p>
+            Umoya celebrates South African artistry and craftsmanship. Every room 
+            features work by local artists. Our ingredients come from nearby farms. 
+            Our staff are part of the Hout Bay community. When you stay with us, 
+            you support the broader ecosystem that makes this place special.
+          </p>
+        </div>
+        
+        <div class="value-card">
+          <h4>Authenticity</h4>
+          <p>
+            We don't believe in cookie-cutter luxury. Each room is different. Each 
+            day unfolds organically. We welcome you as a guest in our home, not a 
+            transaction in a hotel. Real connections, real experiences, real Cape Town.
+          </p>
+        </div>
+        
+        <div class="value-card">
+          <h4>Mindfulness</h4>
+          <p>
+            Umoya is designed to help you slow down and breathe. From the spacious 
+            rooms to the meditation-worthy pool views, every element invites presence. 
+            We believe luxury isn't about excess — it's about creating space for what 
+            truly matters.
+          </p>
+        </div>
+        
+        <div class="value-card">
+          <h4>Accessibility</h4>
+          <p>
+            Beautiful experiences should be available to everyone. We offer wheelchair-accessible 
+            rooms with thoughtful design that never compromises on aesthetics or comfort. 
+            Dignity and luxury aren't mutually exclusive.
+          </p>
+        </div>
+        
+        <div class="value-card">
+          <h4>Excellence</h4>
+          <p>
+            We obsess over details you might never notice — the thread count of the 
+            linens, the pressure of the rain shower, the quality of the coffee beans. 
+            Excellence isn't a goal; it's a practice we commit to every single day.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE DOGS -->
+  <section class="story-section">
+    <div class="story-grid reveal">
+      <div class="story-text">
+        <h3>The Umoya Family</h3>
+        <h2>Meet Tamba & Winston</h2>
+        <p>
+          No story of Umoya would be complete without mentioning our resident ambassadors: 
+          Tamba and Winston, Georgie's beloved dogs who consider themselves the unofficial 
+          welcoming committee.
+        </p>
+        <p>
+          Tamba, the gentle giant, and Winston, the charming rogue, have a sixth sense 
+          for when guests need a friendly snout to pet or a warm presence during breakfast 
+          on the terrace. They embody the spirit of Umoya — warm, approachable, and 
+          impossible not to love.
+        </p>
+        <p>
+          If you're a dog lover, you're in for a treat. If you're allergic or prefer 
+          distance, don't worry — they're well-trained and respectful of boundaries. 
+          Just know that their tail wags are legendary, and their affection is genuine.
+        </p>
+      </div>
+      
+      <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/65290b9d-82be-4780-9753-d600c211e1c7/Umoya026-min.JPG" alt="Umoya Grounds" class="story-image">
+    </div>
+  </section>
+
+  <!-- SUSTAINABILITY DETAIL -->
+  <section class="section reveal" style="background-color: var(--color-olive-dark); color: var(--color-warm-white); padding: 6rem 2rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="text-align: center; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; margin-bottom: 4rem;">
+        Sustainability in Action
+      </h2>
+      
+      <div class="grid grid-2" style="gap: 4rem;">
+        <div>
+          <h4 style="color: var(--color-terracotta); font-size: 1.5rem; margin-bottom: 1rem;">Energy & Water</h4>
+          <p style="line-height: 2; margin-bottom: 2rem;">
+            Our extensive solar panel installation powers most of our operations with 
+            clean energy. Rainwater catchment systems collect and store water for gardens 
+            and non-potable use. Our borehole provides a sustainable water source, reducing 
+            dependence on municipal supply during Cape Town's dry seasons.
+          </p>
+          
+          <h4 style="color: var(--color-terracotta); font-size: 1.5rem; margin-bottom: 1rem;">Gardens & Biodiversity</h4>
+          <p style="line-height: 2;">
+            Every plant in our gardens is indigenous to the Cape region. This isn't just 
+            aesthetically beautiful — it supports local pollinators, requires less water, 
+            and helps preserve the unique Fynbos ecosystem that makes this area a global 
+            biodiversity hotspot.
+          </p>
+        </div>
+        
+        <div>
+          <h4 style="color: var(--color-terracotta); font-size: 1.5rem; margin-bottom: 1rem;">Local Sourcing</h4>
+          <p style="line-height: 2; margin-bottom: 2rem;">
+            Our breakfast ingredients come from local farms and our own gardens when possible. 
+            Building materials were sourced regionally, reducing transportation emissions. 
+            Artworks, furniture, and decor all come from South African creators, keeping 
+            economic benefits within the community.
+          </p>
+          
+          <h4 style="color: var(--color-terracotta); font-size: 1.5rem; margin-bottom: 1rem;">Waste Reduction</h4>
+          <p style="line-height: 2;">
+            We compost organic waste, recycle diligently, and avoid single-use plastics 
+            wherever possible. Our toiletries are eco-friendly and sourced from sustainable 
+            producers. Small choices compound into significant impact over time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section reveal" style="padding: 6rem 2rem;">
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <h2 style="font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 2rem;">
+        Become part of our story
+      </h2>
+      <p style="font-size: 1.25rem; margin-bottom: 3rem; color: var(--color-stone);">
+        Experience Umoya for yourself and discover why this place captures hearts.
+      </p>
+      <a href="contact.html" class="btn btn-secondary" style="margin-right: 1rem;">Book Your Stay</a>
+      <a href="rooms.html" class="btn btn-secondary">Explore Rooms</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-section">
+        <h4>Umoya Hotel</h4>
+        <p>
+          11 Saddlers Close<br>
+          Hout Bay<br>
+          Cape Town, South Africa
+        </p>
+        <p style="margin-top: 1rem;">
+          <strong>Phone:</strong> <a href="tel:+27764006020">+27 76 400 6020</a><br>
+          <strong>Email:</strong> <a href="mailto:reservations@umoyahotel.com">reservations@umoyahotel.com</a>
+        </p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="rooms.html">Rooms & Suites</a>
+        <a href="about.html">Our Story</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="activities.html">Experiences</a>
+        <a href="contact.html">Contact & Visit</a>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Stay Connected</h4>
+        <p>Follow our journey and discover the magic of Umoya.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Newsletter</h4>
+        <p>Receive updates and special offers.</p>
+        <form class="footer-newsletter">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit">Join</button>
+        </form>
+      </div>
+      
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2026 Umoya Hotel. All rights reserved. | Designed with care in Cape Town.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
