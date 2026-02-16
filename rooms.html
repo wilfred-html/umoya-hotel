@@ -3,425 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rooms & Suites — Umoya Hotel</title>
-  <meta name="description" content="Discover our luxury rooms and private cottages. Each space uniquely designed with local art, modern amenities, and breathtaking views.">
+  <title>Rooms & Cottages — Umoya Hotel</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .room-section {
-      margin-bottom: 8rem;
-    }
-    
-    .room-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-    
-    .room-layout:nth-child(even) .room-image {
-      order: 2;
-    }
-    
-    .room-layout:nth-child(even) .room-details {
-      order: 1;
-    }
-    
-    .room-image {
-      width: 100%;
-      height: 600px;
-      object-fit: cover;
-      box-shadow: var(--shadow-medium);
-    }
-    
-    .room-details h3 {
-      color: var(--color-terracotta);
-      margin-bottom: 1rem;
-    }
-    
-    .room-details h2 {
-      margin-bottom: 2rem;
-    }
-    
-    .room-description {
-      font-size: 1.125rem;
-      line-height: 1.9;
-      margin-bottom: 2rem;
-      color: var(--color-charcoal);
-    }
-    
-    .amenities {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin: 3rem 0;
-    }
-    
-    .amenity {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      font-size: 1rem;
-      color: var(--color-stone);
-    }
-    
-    .amenity svg {
-      flex-shrink: 0;
-      color: var(--color-olive);
-    }
-    
-    .room-features {
-      background-color: var(--color-sand);
-      padding: 2rem;
-      margin: 2rem 0;
-      border-left: 4px solid var(--color-terracotta);
-    }
-    
-    .room-features ul {
-      list-style: none;
-      margin-top: 1rem;
-    }
-    
-    .room-features li {
-      padding: 0.5rem 0;
-      color: var(--color-charcoal);
-    }
-    
-    .room-features li::before {
-      content: "✓ ";
-      color: var(--color-terracotta);
-      font-weight: bold;
-      margin-right: 0.5rem;
-    }
-    
-    @media (max-width: 968px) {
-      .room-layout {
-        grid-template-columns: 1fr;
-      }
-      
-      .room-layout:nth-child(even) .room-image,
-      .room-layout:nth-child(even) .room-details {
-        order: unset;
-      }
-      
-      .room-image {
-        height: 400px;
-      }
-      
-      .amenities {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 <body>
 
-  <!-- NAVIGATION -->
   <nav class="nav">
-    <div class="nav-container">
-      <a href="index.html">
-        <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/b1fe7a6b-8feb-4164-8c0e-5db2b9d1bca5/UmoyaTERRA.png?format=1500w" alt="Umoya Hotel" class="nav-logo">
-      </a>
-      
-      <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="rooms.html" class="nav-link">Rooms</a></li>
-        <li><a href="about.html" class="nav-link">Our Story</a></li>
-        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-        <li><a href="activities.html" class="nav-link">Experiences</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-      
-      <div class="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
+    <a href="index.html"><img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/b1fe7a6b-8feb-4164-8c0e-5db2b9d1bca5/UmoyaTERRA.png?format=1500w" alt="Umoya" class="nav-logo"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a href="about.html">Our Story</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="activities.html">Experiences</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-book">Book a Room</a>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero" style="height: 70vh;">
-    <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/d462053a-7115-4754-951f-5c8099c7390d/Umoya038-min.jpg" alt="Luxury Rooms" class="hero-image">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="subtitle hero-subtitle">Accommodations</p>
-      <h1 class="hero-title">Rooms & Cottages</h1>
-      <p class="tagline hero-subtitle">Spaces designed to nourish<br>and inspire</p>
+  <section class="page-hero">
+    <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/65290b9d-82be-4780-9753-d600c211e1c7/Umoya026-min.JPG" alt="Umoya rooms interior">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="label">Accommodations</span>
+      <h1>Rooms &amp; Cottages</h1>
     </div>
   </section>
 
-  <!-- INTRO -->
-  <section class="section reveal" style="padding: 6rem 2rem;">
-    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-      <h2 style="font-weight: 300; margin-bottom: 2rem; font-size: clamp(2rem, 5vw, 3.5rem);">
-        Every room tells a story
-      </h2>
-      <p style="font-size: 1.25rem; line-height: 2; color: var(--color-stone);">
-        At Umoya, each accommodation has been thoughtfully designed with original works from local artists, 
-        sustainable materials, and every modern comfort. Choose your sanctuary.
-      </p>
+  <!-- Intro text -->
+  <section class="section" style="text-align:center; max-width:800px; margin:0 auto;">
+    <div class="reveal">
+      <p style="font-size:1.15rem; color:var(--warm-gray); line-height:1.9;">Every room at Umoya is uniquely designed, showcasing natural tones in poplar wood beams, terracotta clay tiles, and endless sliding glass doors that let the outside in. High-pitched double-volume ceilings echo the surrounding mountain ranges, while local artwork adorns every wall.</p>
     </div>
   </section>
 
-  <!-- ROOMS CONTENT -->
-  <section class="section" style="max-width: 1400px; margin: 0 auto; padding: 4rem 2rem;">
-    
-    <!-- LUXURY ROOM -->
-    <div class="room-section reveal">
-      <div class="room-layout">
-        <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/d462053a-7115-4754-951f-5c8099c7390d/Umoya038-min.jpg" alt="Luxury Room" class="room-image">
-        
-        <div class="room-details">
-          <h3>Accommodation</h3>
-          <h2>Luxury Room</h2>
-          <p class="room-description">
-            Our signature rooms are sanctuaries of refined comfort. Each one is uniquely designed 
-            featuring carefully curated works from local Cape Town artists, creating a gallery-like 
-            atmosphere that celebrates South African creativity. Floor heating and cooling ensure 
-            year-round comfort, while rain showers and premium linens elevate your daily rituals.
-          </p>
-          
-          <div class="room-features">
-            <h4 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;">Room Features</h4>
-            <ul>
-              <li>Original artwork by local artists</li>
-              <li>Dedicated workspace with ergonomic seating</li>
-              <li>Smart TV with streaming services + DSTV</li>
-              <li>Luxurious rain shower</li>
-              <li>Floor heating and cooling system</li>
-              <li>Premium bathrobes and toiletries</li>
-              <li>In-room safe</li>
-              <li>Professional hairdryer</li>
-              <li>Complimentary coffee and tea station</li>
-              <li>Minibar with local selections</li>
-            </ul>
-          </div>
-          
-          <div class="amenities">
-            <div class="amenity">
-              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18c-3.86-.96-7-5.24-7-9V8.3l7-3.45 7 3.45V11c0 3.76-3.14 8.04-7 9z"/>
-              </svg>
-              <span>Wheelchair Accessible Options</span>
-            </div>
-            <div class="amenity">
-              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
-              </svg>
-              <span>Smart Climate Control</span>
-            </div>
-            <div class="amenity">
-              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
-              <span>Eco-Friendly Design</span>
-            </div>
-          </div>
-          
-          <a href="contact.html" class="btn btn-secondary">Book This Room</a>
-        </div>
+  <!-- Luxury Room -->
+  <div class="room-detail">
+    <div class="room-detail-img">
+      <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/d462053a-7115-4754-951f-5c8099c7390d/Umoya038-min.jpg" alt="Luxury Room at Umoya">
+    </div>
+    <div class="room-detail-content reveal">
+      <span class="label">En-Suite</span>
+      <h2>Luxury Room</h2>
+      <p>Individually designed sanctuaries featuring works by local artists. Each room offers sweeping views, natural light through floor-to-ceiling glass, and an atmosphere of quiet refinement.</p>
+      <div class="amenities">
+        <span class="amenity-tag">Rain Shower</span>
+        <span class="amenity-tag">Smart TV</span>
+        <span class="amenity-tag">Workspace</span>
+        <span class="amenity-tag">Minibar</span>
+        <span class="amenity-tag">Floor Heating</span>
+        <span class="amenity-tag">Bathrobes</span>
+        <span class="amenity-tag">Coffee &amp; Tea</span>
+        <span class="amenity-tag">Safe</span>
       </div>
+      <a href="contact.html" class="btn btn-primary">Book This Room</a>
     </div>
+  </div>
 
-    <!-- OLIVE COTTAGE -->
-    <div class="room-section reveal">
-      <div class="room-layout">
-        <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/65290b9d-82be-4780-9753-d600c211e1c7/Umoya026-min.JPG" alt="Olive Cottage" class="room-image">
-        
-        <div class="room-details">
-          <h3>Private Cottage</h3>
-          <h2>Olive Cottage</h2>
-          <p class="room-description">
-            Perfect for small families or groups of friends, the Olive Cottage sleeps four guests 
-            in complete privacy and comfort. Surrounded by indigenous gardens and olive trees, 
-            this self-contained cottage offers a peaceful retreat with all the amenities of our 
-            luxury rooms, plus the added space and privacy of your own entrance.
-          </p>
-          
-          <div class="room-features">
-            <h4 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;">Cottage Features</h4>
-            <ul>
-              <li>Sleeps 4 guests comfortably</li>
-              <li>Private entrance and outdoor space</li>
-              <li>Separate living area</li>
-              <li>Full kitchen facilities</li>
-              <li>Two bedrooms with luxury linens</li>
-              <li>Two bathrooms with rain showers</li>
-              <li>All standard luxury room amenities</li>
-              <li>Garden views from every window</li>
-              <li>Ideal for extended stays</li>
-            </ul>
-          </div>
-          
-          <div class="amenities">
-            <div class="amenity">
-              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
-              </svg>
-              <span>Sleeps 4</span>
-            </div>
-            <div class="amenity">
-              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-              </svg>
-              <span>Private Cottage</span>
-            </div>
-            <div class="amenity">
-              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-              </svg>
-              <span>Garden Setting</span>
-            </div>
-          </div>
-          
-          <a href="contact.html" class="btn btn-secondary">Book This Cottage</a>
-        </div>
+  <!-- Olive Cottage -->
+  <div class="room-detail">
+    <div class="room-detail-img">
+      <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/65290b9d-82be-4780-9753-d600c211e1c7/Umoya026-min.JPG" alt="Olive Cottage">
+    </div>
+    <div class="room-detail-content reveal" style="background:var(--off-white);">
+      <span class="label">Self-Catering · Sleeps 4</span>
+      <h2>Olive Cottage</h2>
+      <p>A self-catering haven for small groups with a shared lounge, fully-equipped kitchen, and dining area complete with a wood-burning Godin fireplace. Includes wheelchair-friendly rooms.</p>
+      <div class="amenities">
+        <span class="amenity-tag">Kitchen</span>
+        <span class="amenity-tag">Wood Fireplace</span>
+        <span class="amenity-tag">Lounge</span>
+        <span class="amenity-tag">Wheelchair Access</span>
+        <span class="amenity-tag">Smart TV</span>
+        <span class="amenity-tag">Rain Shower</span>
       </div>
+      <a href="contact.html" class="btn btn-primary">Book This Cottage</a>
     </div>
+  </div>
 
-    <!-- LAVENDER COTTAGE -->
-    <div class="room-section reveal">
-      <div class="room-layout">
-        <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/18acea4c-ea33-40e3-b1da-9bf9a523001b/Umoya028-min.JPG" alt="Lavender Cottage" class="room-image">
-        
-        <div class="room-details">
-          <h3>Large Cottage</h3>
-          <h2>Lavender Cottage</h2>
-          <p class="room-description">
-            Our most spacious offering, the Lavender Cottage accommodates up to eight guests — 
-            perfect for family gatherings, special celebrations, or groups of friends exploring 
-            Cape Town together. With panoramic mountain and bay views, multiple living spaces, 
-            and a private outdoor area, this is your home away from home in Hout Bay.
-          </p>
-          
-          <div class="room-features">
-            <h4 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;">Cottage Features</h4>
-            <ul>
-              <li>Sleeps 8 guests in comfort</li>
-              <li>Four spacious bedrooms</li>
-              <li>Three full bathrooms</li>
-              <li>Expansive living and dining areas</li>
-              <li>Fully equipped modern kitchen</li>
-              <li>Private outdoor terrace</li>
-              <li>Panoramic mountain and bay views</li>
-              <li>Multiple entertainment areas</li>
-              <li>All premium amenities throughout</li>
-              <li>Perfect for gatherings and celebrations</li>
-            </ul>
-          </div>
-          
-          <div class="amenities">
-            <div class="amenity">
-              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
-              </svg>
-              <span>Sleeps 8</span>
-            </div>
-            <div class="amenity">
-              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M1 11v10h6v-5h2v5h6V11L8 6l-7 5zm12-5.9l7 5V21h-6v-5h-2v5H6v-9.9l6-4.29 1 .71V3h2v2.1z"/>
-              </svg>
-              <span>Largest Cottage</span>
-            </div>
-            <div class="amenity">
-              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/>
-              </svg>
-              <span>Panoramic Views</span>
-            </div>
-          </div>
-          
-          <a href="contact.html" class="btn btn-secondary">Book This Cottage</a>
-        </div>
+  <!-- Lavender Cottage -->
+  <div class="room-detail">
+    <div class="room-detail-img">
+      <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/18acea4c-ea33-40e3-b1da-9bf9a523001b/Umoya028-min.JPG" alt="Lavender Cottage">
+    </div>
+    <div class="room-detail-content reveal">
+      <span class="label">Self-Catering · Sleeps 8</span>
+      <h2>Lavender Cottage</h2>
+      <p>Spacious enough for families or groups traveling together. Shared living areas, a full kitchen, and the same attention to design and comfort found throughout Umoya. Wheelchair-friendly rooms available.</p>
+      <div class="amenities">
+        <span class="amenity-tag">Full Kitchen</span>
+        <span class="amenity-tag">Wood Fireplace</span>
+        <span class="amenity-tag">Dining Area</span>
+        <span class="amenity-tag">Wheelchair Access</span>
+        <span class="amenity-tag">Smart TV</span>
+        <span class="amenity-tag">Rain Shower</span>
+        <span class="amenity-tag">Bathrobes</span>
       </div>
+      <a href="contact.html" class="btn btn-primary">Book This Cottage</a>
     </div>
-
-  </section>
-
-  <!-- ACCESSIBILITY NOTE -->
-  <section class="section reveal" style="background-color: var(--color-sand); padding: 4rem 2rem;">
-    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-      <h3 style="color: var(--color-olive-dark); margin-bottom: 2rem;">Accessibility & Comfort</h3>
-      <p style="font-size: 1.125rem; line-height: 2; color: var(--color-charcoal);">
-        We believe luxury should be accessible to everyone. Select rooms are wheelchair accessible 
-        with wide doorways, roll-in showers, and thoughtful design throughout. Please let us know 
-        your specific needs when booking, and we'll ensure your stay is perfectly suited to you.
-      </p>
-    </div>
-  </section>
+  </div>
 
   <!-- CTA -->
-  <section class="section reveal" style="padding: 6rem 2rem;">
-    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-      <h2 style="font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 2rem;">
-        Ready to reserve your room?
-      </h2>
-      <p style="font-size: 1.25rem; margin-bottom: 3rem; color: var(--color-stone);">
-        Contact us to check availability and book your stay at Umoya.
-      </p>
-      <a href="contact.html" class="btn btn-secondary" style="margin-right: 1rem;">Contact Us</a>
-      <a href="gallery.html" class="btn btn-secondary">View Gallery</a>
+  <section class="section section--dark" style="text-align:center;">
+    <div class="reveal">
+      <h2 style="font-size:2rem; color:#fff; margin-bottom:1.5rem;">Not sure which room is right?</h2>
+      <p style="color:var(--stone); max-width:450px; margin:0 auto 2rem;">Get in touch and we'll help you find the perfect space for your stay.</p>
+      <a href="contact.html" class="btn btn-primary">Get in Touch</a>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-container">
-      
-      <div class="footer-section">
-        <h4>Umoya Hotel</h4>
-        <p>
-          11 Saddlers Close<br>
-          Hout Bay<br>
-          Cape Town, South Africa
-        </p>
-        <p style="margin-top: 1rem;">
-          <strong>Phone:</strong> <a href="tel:+27764006020">+27 76 400 6020</a><br>
-          <strong>Email:</strong> <a href="mailto:reservations@umoyahotel.com">reservations@umoyahotel.com</a>
-        </p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/b1fe7a6b-8feb-4164-8c0e-5db2b9d1bca5/UmoyaTERRA.png?format=1500w" alt="Umoya">
+        <p>A boutique sanctuary in Hout Bay where African warmth meets refined luxury.</p>
       </div>
-      
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <a href="index.html">Home</a>
-        <a href="rooms.html">Rooms & Suites</a>
-        <a href="about.html">Our Story</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="activities.html">Experiences</a>
-        <a href="contact.html">Contact & Visit</a>
-      </div>
-      
-      <div class="footer-section">
-        <h4>Stay Connected</h4>
-        <p>Follow our journey and discover the magic of Umoya.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Instagram">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-          </a>
-          <a href="#" aria-label="Facebook">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-      
-      <div class="footer-section">
-        <h4>Newsletter</h4>
-        <p>Receive updates and special offers.</p>
-        <form class="footer-newsletter">
-          <input type="email" placeholder="Your email" required>
-          <button type="submit">Join</button>
-        </form>
-      </div>
-      
+      <div><h4>Navigate</h4><ul><li><a href="rooms.html">Rooms</a></li><li><a href="about.html">Our Story</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="activities.html">Experiences</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+27764006020">+27 76 400 6020</a></li><li><a href="mailto:reservations@umoyahotel.com">reservations@umoyahotel.com</a></li><li>11 Saddlers Close, Hout Bay</li></ul></div>
+      <div><h4>Follow</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li></ul></div>
     </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; 2026 Umoya Hotel. All rights reserved. | Designed with care in Cape Town.</p>
-    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Umoya Hotel</span><span>Design by Ideation Station</span></div>
   </footer>
 
   <script src="main.js"></script>

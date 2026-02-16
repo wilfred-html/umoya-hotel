@@ -1,377 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact & Visit — Umoya Hotel</title>
-  <meta name="description" content="Contact Umoya Hotel to reserve your stay, ask questions, or plan your visit to Hout Bay, Cape Town." />
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    .contact-hero {
-      padding: 12rem 2rem 6rem;
-      background: radial-gradient(1200px 700px at 15% 20%, rgba(200,109,75,0.18), transparent 55%),
-                  radial-gradient(900px 600px at 85% 40%, rgba(139,140,94,0.18), transparent 60%),
-                  linear-gradient(135deg, var(--color-warm-white) 0%, var(--color-sand) 100%);
-    }
-
-    .contact-wrap {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 2rem 6rem;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 4rem;
-      align-items: start;
-      margin-top: 3rem;
-    }
-
-    .panel {
-      background: white;
-      box-shadow: var(--shadow-soft);
-      padding: 3rem;
-      border-top: 4px solid var(--color-terracotta);
-    }
-
-    .panel h3 {
-      font-size: 2rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .panel p {
-      color: var(--color-stone);
-      margin-bottom: 1.5rem;
-      line-height: 1.9;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      margin-bottom: 1.25rem;
-    }
-
-    label {
-      font-family: var(--font-display);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 0.95rem;
-      color: var(--color-charcoal);
-    }
-
-    input, textarea, select {
-      font-family: var(--font-body);
-      font-size: 1.05rem;
-      padding: 1rem 1.1rem;
-      border: 1px solid rgba(181,168,148,0.55);
-      background: linear-gradient(180deg, rgba(250,247,242,0.9), rgba(250,247,242,0.6));
-      outline: none;
-      transition: var(--transition-fast);
-    }
-
-    input:focus, textarea:focus, select:focus {
-      border-color: rgba(200,109,75,0.75);
-      box-shadow: 0 0 0 4px rgba(200,109,75,0.15);
-    }
-
-    textarea {
-      min-height: 170px;
-      resize: vertical;
-    }
-
-    .mini {
-      display: grid;
-      gap: 1rem;
-    }
-
-    .info-card {
-      background: rgba(232,220,196,0.45);
-      border: 1px solid rgba(181,168,148,0.35);
-      padding: 1.75rem;
-    }
-
-    .info-card h4 {
-      color: var(--color-olive-dark);
-      margin-bottom: 0.75rem;
-      font-size: 1.35rem;
-    }
-
-    .info-card a {
-      color: var(--color-charcoal);
-      text-decoration: underline;
-      text-underline-offset: 4px;
-      text-decoration-color: rgba(200,109,75,0.45);
-    }
-
-    .info-card a:hover {
-      text-decoration-color: rgba(200,109,75,0.85);
-      color: var(--color-terracotta);
-    }
-
-    .map {
-      width: 100%;
-      height: 420px;
-      border: 0;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .directions {
-      margin-top: 2.5rem;
-      padding: 2.25rem;
-      background: var(--color-charcoal);
-      color: var(--color-sand);
-      box-shadow: var(--shadow-medium);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .directions::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background: radial-gradient(circle at 30% 30%, rgba(200,109,75,0.28), transparent 55%),
-                  radial-gradient(circle at 70% 60%, rgba(139,140,94,0.22), transparent 60%);
-      transform: rotate(8deg);
-      pointer-events: none;
-    }
-
-    .directions > * { position: relative; }
-
-    .directions h3 {
-      color: var(--color-terracotta-light);
-      margin-bottom: 1rem;
-    }
-
-    .directions ul { list-style: none; margin-top: 1rem; }
-    .directions li { padding: 0.55rem 0; line-height: 1.8; }
-    .directions li::before { content: "•"; margin-right: 0.75rem; color: var(--color-terracotta); }
-
-    @media (max-width: 980px) {
-      .contact-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      .panel { padding: 2rem; }
-      .contact-wrap { padding: 0 1.5rem 5rem; }
-      .map { height: 360px; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Umoya Hotel</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- NAVIGATION -->
   <nav class="nav">
-    <div class="nav-container">
-      <a href="index.html">
-        <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/b1fe7a6b-8feb-4164-8c0e-5db2b9d1bca5/UmoyaTERRA.png?format=1500w" alt="Umoya Hotel" class="nav-logo" />
-      </a>
-      <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="rooms.html" class="nav-link">Rooms</a></li>
-        <li><a href="about.html" class="nav-link">Our Story</a></li>
-        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-        <li><a href="activities.html" class="nav-link">Experiences</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="nav-toggle"><span></span><span></span><span></span></div>
-    </div>
+    <a href="index.html"><img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/b1fe7a6b-8feb-4164-8c0e-5db2b9d1bca5/UmoyaTERRA.png?format=1500w" alt="Umoya" class="nav-logo"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a href="about.html">Our Story</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="activities.html">Experiences</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-book">Book a Room</a>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
   </nav>
 
-  <!-- HERO -->
-  <header class="contact-hero">
-    <div class="contact-wrap">
-      <p class="subtitle reveal" style="text-align:center; margin-bottom: 1.5rem;">Contact & Visit</p>
-      <h1 class="reveal" style="text-align:center; font-weight:300;">Let’s plan your stay</h1>
-      <p class="reveal" style="max-width: 850px; margin: 2rem auto 0; text-align:center; color: var(--color-stone); font-size: 1.25rem; line-height: 2;">
-        Tell us what you’re dreaming of — quiet mornings on the terrace, days exploring the Cape, or simply a place to breathe.
-        We’ll come back to you with availability and a thoughtful recommendation.
-      </p>
-
-      <div class="contact-grid">
-        <!-- FORM -->
-        <section class="panel reveal" aria-label="Contact form">
-          <h3>Send an enquiry</h3>
-          <p>
-            This form is wired for Formspree. Replace the <strong>action</strong> URL with your own Formspree endpoint when deploying.
-          </p>
-
-          <form action="https://formspree.io/f/yourFormId" method="POST">
-            <div class="form-row">
-              <div class="field">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" autocomplete="name" required />
-              </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" autocomplete="email" required />
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="field">
-                <label for="checkin">Check-in</label>
-                <input id="checkin" name="checkin" type="date" />
-              </div>
-              <div class="field">
-                <label for="checkout">Check-out</label>
-                <input id="checkout" name="checkout" type="date" />
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="field">
-                <label for="guests">Guests</label>
-                <select id="guests" name="guests">
-                  <option value="1">1</option>
-                  <option value="2" selected>2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="room">Preferred room</label>
-                <select id="room" name="preferred_room">
-                  <option value="" selected>No preference</option>
-                  <option value="Luxury Room">Luxury Room</option>
-                  <option value="Olive Cottage">Olive Cottage (4-sleeper)</option>
-                  <option value="Lavender Cottage">Lavender Cottage (8-sleeper)</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Tell us what matters: accessibility needs, occasion, interests (hiking, wine, beaches), and anything we can do to make your stay effortless."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-secondary">Send Enquiry</button>
-          </form>
-        </section>
-
-        <!-- INFO -->
-        <aside class="mini reveal" aria-label="Contact details">
-          <div class="info-card">
-            <h4>Direct contact</h4>
-            <p style="margin: 0; color: var(--color-charcoal);">
-              <strong>Phone:</strong> <a href="tel:+27764006020">+27 76 400 6020</a><br />
-              <strong>Email:</strong> <a href="mailto:reservations@umoyahotel.com">reservations@umoyahotel.com</a>
-            </p>
-          </div>
-
-          <div class="info-card">
-            <h4>Address</h4>
-            <p style="margin: 0; color: var(--color-charcoal);">
-              11 Saddlers Close<br />
-              Hout Bay<br />
-              Cape Town, South Africa
-            </p>
-          </div>
-
-          <div class="info-card">
-            <h4>Good to know</h4>
-            <p style="margin: 0; color: var(--color-charcoal);">
-              Wheelchair accessible rooms are available. If you have specific access needs, share them in your message and we’ll recommend the best option.
-            </p>
-          </div>
-        </aside>
-      </div>
-
-      <!-- MAP -->
-      <section class="reveal" style="margin-top: 4rem;">
-        <h2 style="text-align:center; font-weight:300; font-size: clamp(2rem, 4.5vw, 3.25rem); margin-bottom: 2rem;">Find us in Hout Bay</h2>
-        <iframe
-          class="map"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=11%20Saddlers%20Close%2C%20Hout%20Bay%2C%20Cape%20Town&output=embed"
-          title="Map to Umoya Hotel">
-        </iframe>
-
-        <div class="directions" style="margin-top: 2.5rem;">
-          <h3>Getting here</h3>
-          <p style="max-width: 900px; line-height: 2;">
-            Umoya is tucked into a quiet residential pocket of Hout Bay — close enough to everything, yet peacefully removed.
-            If you’d like, we can recommend trusted transfer options.
-          </p>
-          <ul>
-            <li><strong>From Cape Town CBD:</strong> approx. 25–35 minutes (traffic dependent).</li>
-            <li><strong>From Cape Town International Airport (CPT):</strong> approx. 35–55 minutes.</li>
-            <li><strong>Best scenic route:</strong> take Chapman's Peak Drive for one of the most beautiful coastal drives in the world.</li>
-            <li><strong>Parking:</strong> available on/near the property (please confirm on booking).</li>
-          </ul>
-        </div>
-      </section>
-
+  <section class="page-hero" style="height:45vh; min-height:300px;">
+    <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/18acea4c-ea33-40e3-b1da-9bf9a523001b/Umoya028-min.JPG" alt="Umoya">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="label">Get in Touch</span>
+      <h1>Contact</h1>
     </div>
-  </header>
+  </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-section">
-        <h4>Umoya Hotel</h4>
-        <p>
-          11 Saddlers Close<br />
-          Hout Bay<br />
-          Cape Town, South Africa
-        </p>
-        <p style="margin-top: 1rem;">
-          <strong>Phone:</strong> <a href="tel:+27764006020">+27 76 400 6020</a><br />
-          <strong>Email:</strong> <a href="mailto:reservations@umoyahotel.com">reservations@umoyahotel.com</a>
-        </p>
-      </div>
-
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <a href="index.html">Home</a>
-        <a href="rooms.html">Rooms & Suites</a>
-        <a href="about.html">Our Story</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="activities.html">Experiences</a>
-        <a href="contact.html">Contact & Visit</a>
-      </div>
-
-      <div class="footer-section">
-        <h4>Stay Connected</h4>
-        <p>Follow our journey and discover the magic of Umoya.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Instagram">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-          </a>
-          <a href="#" aria-label="Facebook">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="footer-section">
-        <h4>Newsletter</h4>
-        <p>Receive updates and special offers.</p>
-        <form class="footer-newsletter">
-          <input type="email" placeholder="Your email" required />
-          <button type="submit">Join</button>
+  <section class="section">
+    <div class="contact-grid">
+      <div class="contact-form reveal">
+        <h2 style="font-family:var(--font-display); font-size:2rem; margin-bottom:0.5rem;">Make a Reservation</h2>
+        <p style="color:var(--warm-gray); margin-bottom:3rem;">Or ask us anything. We'll reply within 24 hours.</p>
+        
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="dates">Preferred Dates</label>
+          <input type="text" id="dates" name="dates" placeholder="e.g. 15–20 March 2026">
+          
+          <label for="guests">Number of Guests</label>
+          <input type="number" id="guests" name="guests" min="1" max="20">
+          
+          <label for="message">Message</label>
+          <textarea id="message" name="message"></textarea>
+          
+          <button type="submit" class="btn btn-primary" style="margin-top:1rem;">Send Enquiry</button>
         </form>
       </div>
-    </div>
 
-    <div class="footer-bottom">
-      <p>&copy; 2026 Umoya Hotel. All rights reserved. | Designed with care in Cape Town.</p>
+      <div class="contact-info reveal">
+        <div class="contact-info-item">
+          <span class="label">Phone</span>
+          <p><a href="tel:+27764006020">+27 76 400 6020</a></p>
+        </div>
+        <div class="contact-info-item">
+          <span class="label">Email</span>
+          <p><a href="mailto:reservations@umoyahotel.com">reservations@umoyahotel.com</a></p>
+        </div>
+        <div class="contact-info-item">
+          <span class="label">Address</span>
+          <p>11 Saddlers Close<br>Hout Bay, Cape Town<br>South Africa</p>
+        </div>
+        <div class="contact-info-item">
+          <span class="label">Getting Here</span>
+          <p>20 minutes from Cape Town CBD via the M3 and Hout Bay Road. 40 minutes from Cape Town International Airport.</p>
+        </div>
+
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.5!2d18.36!3d-34.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDAzJzAwLjAiUyAxOMKwMjEnMzYuMCJF!5e0!3m2!1sen!2sza!4v1" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/b1fe7a6b-8feb-4164-8c0e-5db2b9d1bca5/UmoyaTERRA.png?format=1500w" alt="Umoya"><p>A boutique sanctuary in Hout Bay where African warmth meets refined luxury.</p></div>
+      <div><h4>Navigate</h4><ul><li><a href="rooms.html">Rooms</a></li><li><a href="about.html">Our Story</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="activities.html">Experiences</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+27764006020">+27 76 400 6020</a></li><li><a href="mailto:reservations@umoyahotel.com">reservations@umoyahotel.com</a></li><li>11 Saddlers Close, Hout Bay</li></ul></div>
+      <div><h4>Follow</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Umoya Hotel</span><span>Design by Ideation Station</span></div>
   </footer>
 
   <script src="main.js"></script>

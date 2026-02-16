@@ -4,399 +4,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experiences — Umoya Hotel</title>
-  <meta name="description" content="Discover the experiences that make Umoya special — from farm-to-table dining to mountain hikes and wine tasting.">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .experience-section {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .experience-content {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 6rem 2rem;
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      align-items: center;
-    }
-    
-    .experience-section:nth-child(even) .experience-image {
-      order: 2;
-    }
-    
-    .experience-section:nth-child(even) .experience-text {
-      order: 1;
-    }
-    
-    .experience-image {
-      position: relative;
-      height: 600px;
-      overflow: hidden;
-      box-shadow: var(--shadow-medium);
-    }
-    
-    .experience-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: var(--transition-smooth);
-    }
-    
-    .experience-section:hover .experience-image img {
-      transform: scale(1.05);
-    }
-    
-    .experience-text h3 {
-      font-size: 1.25rem;
-      color: var(--color-terracotta);
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      margin-bottom: 1rem;
-    }
-    
-    .experience-text h2 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 300;
-      margin-bottom: 2rem;
-      line-height: 1.2;
-    }
-    
-    .experience-text p {
-      font-size: 1.125rem;
-      line-height: 2;
-      color: var(--color-charcoal);
-      margin-bottom: 1.5rem;
-    }
-    
-    .experience-details {
-      background-color: var(--color-sand);
-      padding: 2rem;
-      margin: 2rem 0;
-      border-left: 4px solid var(--color-olive);
-    }
-    
-    .experience-details ul {
-      list-style: none;
-      margin-top: 1rem;
-    }
-    
-    .experience-details li {
-      padding: 0.5rem 0;
-      color: var(--color-charcoal);
-    }
-    
-    .experience-details li::before {
-      content: "→ ";
-      color: var(--color-terracotta);
-      font-weight: bold;
-      margin-right: 0.5rem;
-    }
-    
-    /* Alternating background colors */
-    .experience-section:nth-child(odd) {
-      background-color: var(--color-warm-white);
-    }
-    
-    .experience-section:nth-child(even) {
-      background-color: rgba(232, 220, 196, 0.3);
-    }
-    
-    @media (max-width: 968px) {
-      .experience-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        padding: 4rem 1.5rem;
-      }
-      
-      .experience-section:nth-child(even) .experience-image,
-      .experience-section:nth-child(even) .experience-text {
-        order: unset;
-      }
-      
-      .experience-image {
-        height: 400px;
-      }
-      
-      .experience-section {
-        min-height: auto;
-      }
-    }
-  </style>
 </head>
 <body>
 
-  <!-- NAVIGATION -->
   <nav class="nav">
-    <div class="nav-container">
-      <a href="index.html">
-        <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/b1fe7a6b-8feb-4164-8c0e-5db2b9d1bca5/UmoyaTERRA.png?format=1500w" alt="Umoya Hotel" class="nav-logo">
-      </a>
-      
-      <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="rooms.html" class="nav-link">Rooms</a></li>
-        <li><a href="about.html" class="nav-link">Our Story</a></li>
-        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-        <li><a href="activities.html" class="nav-link">Experiences</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-      
-      <div class="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
+    <a href="index.html"><img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/b1fe7a6b-8feb-4164-8c0e-5db2b9d1bca5/UmoyaTERRA.png?format=1500w" alt="Umoya" class="nav-logo"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a href="about.html">Our Story</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="activities.html">Experiences</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-book">Book a Room</a>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero" style="height: 70vh;">
-    <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/18acea4c-ea33-40e3-b1da-9bf9a523001b/Umoya028-min.JPG" alt="Cape Town Experiences" class="hero-image">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="subtitle hero-subtitle">Discover</p>
-      <h1 class="hero-title">Experiences</h1>
-      <p class="tagline hero-subtitle">Moments that nourish<br>the body and soul</p>
+  <section class="page-hero">
+    <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/cc435b32-4d31-45ac-84e4-5df927ff2457/Umoya_55.JPG" alt="Umoya experiences">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="label">Your Stay</span>
+      <h1>Experiences</h1>
     </div>
   </section>
 
-  <!-- EAT WITH US -->
-  <section class="experience-section reveal">
-    <div class="experience-content">
-      <div class="experience-text">
-        <h3>Nourishment</h3>
-        <h2>Eat With Us</h2>
-        <p>
-          Every morning from 7 to 10am, our terrace comes alive with the aromas of 
-          farm-to-table breakfast. We source ingredients from our own gardens and local 
-          farms, creating dishes that celebrate the bounty of the Cape.
-        </p>
-        <p>
-          Dine indoors in our elegant breakfast room, or choose the outdoor terrace 
-          with sweeping views over Hout Bay. Watch the morning light paint the mountains 
-          while you savor freshly baked bread, seasonal fruit, farm eggs, and locally 
-          roasted coffee.
-        </p>
-        
-        <div class="experience-details">
-          <h4 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;">What to Expect</h4>
-          <ul>
-            <li>Breakfast served 7:00am - 10:00am daily</li>
-            <li>Ingredients from our gardens and local farms</li>
-            <li>Indoor and outdoor seating options</li>
-            <li>Panoramic views over Hout Bay</li>
-            <li>Accommodates dietary restrictions (advance notice appreciated)</li>
-            <li>Coffee and tea available throughout the day</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="experience-image">
-        <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/d462053a-7115-4754-951f-5c8099c7390d/Umoya038-min.jpg" alt="Breakfast Dining">
-      </div>
+  <!-- Eat -->
+  <div class="activity-section">
+    <div class="activity-img">
+      <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/d462053a-7115-4754-951f-5c8099c7390d/Umoya038-min.jpg" alt="Dining at Umoya">
+    </div>
+    <div class="activity-text reveal">
+      <span class="label">Farm to Table</span>
+      <h2>Eat With Us</h2>
+      <p>Breakfast is served from 7am to 10am daily, comprising fresh produce sourced from our garden and local farmers. Guests choose between indoor dining, the terrace overlooking Hout Bay, or the shaded courtyard.</p>
+    </div>
+  </div>
+
+  <!-- Swim -->
+  <div class="activity-section">
+    <div class="activity-img">
+      <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/18acea4c-ea33-40e3-b1da-9bf9a523001b/Umoya028-min.JPG" alt="Pool at Umoya">
+    </div>
+    <div class="activity-text reveal" style="background:var(--off-white);">
+      <span class="label">Heated Pool</span>
+      <h2>Swim With Us</h2>
+      <p>Our 10-metre heated pool is positioned for sweeping views of the bay. Wide, generous steps and a gently sloped floor make it perfect for lounging, exercise, or simply taking in the balmy evenings.</p>
+    </div>
+  </div>
+
+  <!-- Relax -->
+  <div class="activity-section">
+    <div class="activity-img">
+      <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/65290b9d-82be-4780-9753-d600c211e1c7/Umoya026-min.JPG" alt="Relaxation at Umoya">
+    </div>
+    <div class="activity-text reveal">
+      <span class="label">Rest &amp; Renewal</span>
+      <h2>Relax With Us</h2>
+      <p>Our well-stocked library and roaring fireplace provide the perfect escape. Take our dogs for a walk through indigenous gardens, or book an in-room treatment from our network of massage and bodywork therapists.</p>
+    </div>
+  </div>
+
+  <!-- Explore -->
+  <div class="activity-section">
+    <div class="activity-img">
+      <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/cc435b32-4d31-45ac-84e4-5df927ff2457/Umoya_55.JPG" alt="Explore Hout Bay">
+    </div>
+    <div class="activity-text reveal" style="background:var(--off-white);">
+      <span class="label">Beyond Umoya</span>
+      <h2>Explore With Us</h2>
+      <p>Hout Bay sits on Cape Town's scenic Blue Route, just 20 minutes from the city centre. The area offers:</p>
+      <ul>
+        <li>Hiking trails for every fitness level</li>
+        <li>Cycling routes and scenic bike tours</li>
+        <li>Wine tasting at estates 5 minutes away</li>
+        <li>Chapman's Peak and Table Mountain trails</li>
+        <li>Gorgeous beaches and water sports</li>
+        <li>Mariner's Wharf restaurants and shops</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="section section--dark" style="text-align:center;">
+    <div class="reveal">
+      <h2 style="font-size:2rem; color:#fff; margin-bottom:1.5rem;">Ready to experience Umoya?</h2>
+      <p style="color:var(--stone); max-width:450px; margin:0 auto 2rem;">Every day at Umoya is an invitation to slow down, connect, and breathe.</p>
+      <a href="contact.html" class="btn btn-primary">Reserve Your Stay</a>
     </div>
   </section>
 
-  <!-- SWIM WITH US -->
-  <section class="experience-section reveal">
-    <div class="experience-content">
-      <div class="experience-text">
-        <h3>Rejuvenation</h3>
-        <h2>Swim With Us</h2>
-        <p>
-          Our heated 10-meter pool is more than a place to swim — it's a meditation 
-          in water. With panoramic views over Hout Bay, wide accessible steps, and 
-          perfectly maintained temperature year-round, the pool becomes whatever you 
-          need it to be.
-        </p>
-        <p>
-          Morning lap swimmer? The sunrise over the bay is your reward. Afternoon 
-          floater? Let the mountain shadows cool the day. Evening contemplator? 
-          Watch the lights of Hout Bay twinkle to life as you drift.
-        </p>
-        
-        <div class="experience-details">
-          <h4 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;">Pool Features</h4>
-          <ul>
-            <li>10-meter heated pool</li>
-            <li>Maintained at comfortable temperature year-round</li>
-            <li>Panoramic bay and mountain views</li>
-            <li>Wide steps for easy access</li>
-            <li>Wheelchair accessible</li>
-            <li>Loungers and shaded areas</li>
-            <li>Towels provided</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="experience-image">
-        <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/18acea4c-ea33-40e3-b1da-9bf9a523001b/Umoya028-min.JPG" alt="Pool and Views">
-      </div>
-    </div>
-  </section>
-
-  <!-- RELAX WITH US -->
-  <section class="experience-section reveal">
-    <div class="experience-content">
-      <div class="experience-text">
-        <h3>Restoration</h3>
-        <h2>Relax With Us</h2>
-        <p>
-          Sometimes the best experience is simply... being. Our library invites you 
-          to curl up with a book by the fireplace. Our gardens welcome you to wander 
-          among indigenous plants. Tamba and Winston are always ready for a gentle walk.
-        </p>
-        <p>
-          For deeper restoration, we can arrange in-room massage and bodywork with 
-          skilled local therapists. Choose from Swedish massage, deep tissue work, 
-          reflexology, or specialized treatments designed to melt away travel fatigue 
-          and reconnect you with your body.
-        </p>
-        
-        <div class="experience-details">
-          <h4 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;">Relaxation Options</h4>
-          <ul>
-            <li>Library with fireplace and curated book collection</li>
-            <li>Indigenous gardens for peaceful walks</li>
-            <li>Dog walks with Tamba and Winston (our gentle ambassadors)</li>
-            <li>In-room massage and bodywork (advance booking required)</li>
-            <li>Swedish, deep tissue, and reflexology treatments available</li>
-            <li>Quiet spaces throughout the property</li>
-            <li>Yoga mats available upon request</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="experience-image">
-        <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/65290b9d-82be-4780-9753-d600c211e1c7/Umoya026-min.JPG" alt="Relaxation Spaces">
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPLORE WITH US -->
-  <section class="experience-section reveal">
-    <div class="experience-content">
-      <div class="experience-text">
-        <h3>Adventure</h3>
-        <h2>Explore With Us</h2>
-        <p>
-          Hout Bay is your gateway to some of Cape Town's most spectacular experiences. 
-          Chapman's Peak Drive — one of the world's most scenic coastal roads — is 
-          minutes away. Table Mountain, beaches, wine estates, and water sports are 
-          all within easy reach.
-        </p>
-        <p>
-          We're happy to help arrange everything from hiking guides to wine tasting 
-          tours, cycling routes to boat charters. Or simply ask us for our favorite 
-          local spots — the hidden beach, the best sunset viewpoint, the family-run 
-          restaurant that tourists never find.
-        </p>
-        
-        <div class="experience-details">
-          <h4 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 1rem;">Nearby Experiences</h4>
-          <ul>
-            <li>Chapman's Peak Drive (iconic scenic route)</li>
-            <li>Hiking trails for all levels</li>
-            <li>Cycling routes through stunning landscapes</li>
-            <li>Wine tasting (estates just 5 minutes away)</li>
-            <li>Beaches for swimming, surfing, and relaxation</li>
-            <li>Mariner's Wharf for fresh seafood and harbor views</li>
-            <li>Table Mountain (cable car and hiking access)</li>
-            <li>Water sports: kayaking, surfing, boat charters</li>
-            <li>Local markets and artisan studios</li>
-          </ul>
-        </div>
-        
-        <p style="margin-top: 2rem; font-style: italic; color: var(--color-olive);">
-          "We'll share our insider knowledge to help you discover the Cape Town that 
-          locals love — the one beyond the guidebooks."
-        </p>
-      </div>
-      
-      <div class="experience-image">
-        <img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/cc435b32-4d31-45ac-84e4-5df927ff2457/Umoya_55.JPG" alt="Hout Bay Exploration">
-      </div>
-    </div>
-  </section>
-
-  <!-- CONCIERGE CTA -->
-  <section class="section reveal" style="background-color: var(--color-olive-dark); color: var(--color-warm-white); padding: 6rem 2rem;">
-    <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
-      <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; margin-bottom: 2rem;">
-        Let us curate your perfect Cape Town experience
-      </h2>
-      <p style="font-size: 1.25rem; line-height: 2; margin-bottom: 3rem;">
-        Whether you want adrenaline-pumping adventure or total tranquility, 
-        we'll help you design the ideal itinerary. Just tell us what calls to you.
-      </p>
-      <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-container">
-      
-      <div class="footer-section">
-        <h4>Umoya Hotel</h4>
-        <p>
-          11 Saddlers Close<br>
-          Hout Bay<br>
-          Cape Town, South Africa
-        </p>
-        <p style="margin-top: 1rem;">
-          <strong>Phone:</strong> <a href="tel:+27764006020">+27 76 400 6020</a><br>
-          <strong>Email:</strong> <a href="mailto:reservations@umoyahotel.com">reservations@umoyahotel.com</a>
-        </p>
-      </div>
-      
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <a href="index.html">Home</a>
-        <a href="rooms.html">Rooms & Suites</a>
-        <a href="about.html">Our Story</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="activities.html">Experiences</a>
-        <a href="contact.html">Contact & Visit</a>
-      </div>
-      
-      <div class="footer-section">
-        <h4>Stay Connected</h4>
-        <p>Follow our journey and discover the magic of Umoya.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Instagram">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-          </a>
-          <a href="#" aria-label="Facebook">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-      
-      <div class="footer-section">
-        <h4>Newsletter</h4>
-        <p>Receive updates and special offers.</p>
-        <form class="footer-newsletter">
-          <input type="email" placeholder="Your email" required>
-          <button type="submit">Join</button>
-        </form>
-      </div>
-      
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="https://images.squarespace-cdn.com/content/v1/6405c59bf1d8457ca352be9c/b1fe7a6b-8feb-4164-8c0e-5db2b9d1bca5/UmoyaTERRA.png?format=1500w" alt="Umoya"><p>A boutique sanctuary in Hout Bay where African warmth meets refined luxury.</p></div>
+      <div><h4>Navigate</h4><ul><li><a href="rooms.html">Rooms</a></li><li><a href="about.html">Our Story</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="activities.html">Experiences</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+27764006020">+27 76 400 6020</a></li><li><a href="mailto:reservations@umoyahotel.com">reservations@umoyahotel.com</a></li><li>11 Saddlers Close, Hout Bay</li></ul></div>
+      <div><h4>Follow</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li></ul></div>
     </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; 2026 Umoya Hotel. All rights reserved. | Designed with care in Cape Town.</p>
-    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Umoya Hotel</span><span>Design by Ideation Station</span></div>
   </footer>
 
   <script src="main.js"></script>
