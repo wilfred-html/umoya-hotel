@@ -6,6 +6,7 @@
 // NAVIGATION
 // ==========================================
 
+document.documentElement.classList.add('js-ready');
 document.addEventListener('DOMContentLoaded', function() {
   
   // Mobile Navigation Toggle
